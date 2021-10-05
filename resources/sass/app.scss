@@ -1,0 +1,104 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+// Variables
+@import 'variables';
+$primary: #45B649;
+$success : #45B649;
+// $info: #2d3436;
+$info: #fff;
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+body {
+    background-color: #ffff;
+}
+
+.bg-g {
+    background: #DCE35B;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #45B649, #DCE35B);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #45B649, #DCE35B);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.navbar-light .navbar-nav .nav-link.active {
+    font-weight: bold;
+}
+
+.fs-20 {
+    font-size: 20px;
+}
+
+html,
+body,
+.main-wrapper-grid {
+    width: 100%;
+    height: 100%;
+}
+
+.main-wrapper-grid {
+    display: grid;
+    grid-template-areas:
+        "header"
+        "content"
+        "footer";
+    grid-template-rows: auto 1fr auto;
+}
+
+.main-header-grid {
+    grid-area: "header";
+}
+
+.main-content-grid {
+    grid-area: "content";
+}
+
+.main-footer-grid {
+    grid-area: "footer";
+}
+
+.wrapper-Products {
+    display: grid;
+    grid-template-areas:
+        "image content"
+        "coments coments";
+    grid-template-rows: auto 1fr;
+}
+
+.Products-image {
+    grid-area: "image";
+    justify-items: center;
+    place-self: center;
+}
+
+.Products-content {
+    grid-area: "content";
+}
+
+.Products-coments {
+    grid-area: "coments";
+    justify-items: center;
+    place-self: center stretch;
+    grid-column-start: 1;
+    grid-column-end: span 2;
+}
+
+.img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.img img {
+    height: 200px;
+    padding-right: 10px;
+}
+
+.size-14 {
+    font-size: 24px;
+    ;
+}
